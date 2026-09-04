@@ -1,0 +1,52 @@
+---
+import type { LandingContent, Lang } from '../utils/i18n';
+
+interface Props {
+  lang: Lang;
+  content: LandingContent;
+}
+const { content, lang } = Astro.props;
+const title = lang === 'es' ? 'Trabajos recientes' : 'Recent work';
+const pswpId = 'galeria-pswp';
+---
+
+<section class="mx-auto max-w-6xl px-4 py-12">
+  <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{title}</h2>
+  <div class="mt-6 grid grid-cols-1 gap-3 sm:columns-2 sm:block sm:gap-4 lg:columns-3" id={pswpId}>
+    {
+      content.gallery.map((img, i) => (
+        <a
+          href={img.src}
+          data-pswp-width="1200"
+          data-pswp-height="900"
+          data-track={`gallery_image_open_${i}`}
+          class="group mb-3 block overflow-hidden rounded-xl sm:mb-4 sm:break-inside-avoid"
+        >
+          <img
+            src={img.src}
+            alt={img.alt}
+            width="800"
+            height="600"
+            loading="lazy"
+            class="aspect-[4/3] w-full object-cover transition-transform group-hover:scale-105"
+          />
+          <span class="block bg-neutral-900 px-3 py-2 text-xs font-semibold text-white">
+            {img.caption}
+          </span>
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#galeria-pswp',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+  });
+  lightbox.init();
+</script>
