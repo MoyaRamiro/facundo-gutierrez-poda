@@ -19,6 +19,7 @@
     "zod": "latest"
   },
   "devDependencies": {
+    "@astrojs/check": "latest",
     "@types/node": "latest",
     "typescript": "latest"
   }

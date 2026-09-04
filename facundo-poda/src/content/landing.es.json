@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "h1": "Poda de palmeras y árboles en Fuengirola y alrededores",
+    "subhead": "Especialistas en poda de palmeras. Presupuesto gratis, respuesta en menos de 2 horas y gestión de residuos incluida.",
+    "ctaWhatsApp": "Pedir presupuesto por WhatsApp",
+    "ctaPhone": "Llamar ahora",
+    "badges": ["+15 años de experiencia", "Seguro de responsabilidad civil", "Presupuesto gratis"]
+  },
+  "services": [
+    { "id": "palmeras", "title": "Poda de palmeras", "benefit": "Limpieza de corona, dátiles y seguridad. Palmeras sanas todo el año.", "icon": "palm" },
+    { "id": "arboles", "title": "Poda de árboles", "benefit": "Poda de formación, saneamiento y reducción de copa.", "icon": "tree" },
+    { "id": "tala", "title": "Tala y descepe", "benefit": "Retirada completa y segura, con triturado de tocón.", "icon": "axe" },
+    { "id": "emergencias", "title": "Emergencias 24h", "benefit": "Árbol caído o ramas peligrosas tras tormenta. Actuamos hoy.", "icon": "alert" }
+  ],
+  "areas": {
+    "title": "Zona de servicio",
+    "subtitle": "Nos desplazamos a tu zona en la Costa del Sol",
+    "towns": ["Fuengirola", "Mijas", "Benalmádena", "Alhaurín el Grande", "Alhaurín de la Torre"]
+  },
+  "whyUs": [
+    { "icon": "shield", "title": "Asegurado", "desc": "Seguro de responsabilidad civil en cada trabajo." },
+    { "icon": "clock", "title": "Respuesta < 2h", "desc": "Te contestamos el mismo día, normalmente en 2 horas." },
+    { "icon": "leaf", "title": "Residuos gestionados", "desc": "Nos llevamos todos los restos. Tu jardín queda limpio." },
+    { "icon": "badge", "title": "+15 años", "desc": "Experiencia local en palmeras y arbolado mediterráneo." }
+  ],
+  "gallery": [
+    { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palmera en Fuengirola antes de la poda", "caption": "Palmera datilera — Fuengirola", "service": "palmeras" },
+    { "src": "/images/galeria/palmera-despues-1.jpg", "alt": "Palmera en Fuengirola después de la poda", "caption": "Misma palmera tras limpieza de corona", "service": "palmeras" },
+    { "src": "/images/galeria/pino-antes-1.jpg", "alt": "Pino en Mijas antes de reducir copa", "caption": "Reducción de copa — Mijas", "service": "arboles" },
+    { "src": "/images/galeria/pino-despues-1.jpg", "alt": "Pino en Mijas después de reducir copa", "caption": "Copa equilibrada y segura", "service": "arboles" },
+    { "src": "/images/galeria/jardin-1.jpg", "alt": "Jardín en Benalmádena tras mantenimiento", "caption": "Mantenimiento — Benalmádena", "service": "arboles" },
+    { "src": "/images/galeria/tala-1.jpg", "alt": "Tala controlada de árbol en Alhaurín", "caption": "Tala controlada — Alhaurín", "service": "tala" }
+  ],
+  "reviews": [
+    { "author": "Carmen R.", "rating": 5, "text": "Vino a podar dos palmeras altísimas y dejó todo impecable. Rápido y buen precio.", "source": "Google" },
+    { "author": "John W.", "rating": 5, "text": "Professional job on our garden in Mijas. Cleared everything away. Highly recommended.", "source": "Google" },
+    { "author": "Antonio M.", "rating": 5, "text": "Tras la tormenta vino el mismo día a retirar una rama peligrosa. Muy serio.", "source": "Google" }
+  ],
+  "faq": [
+    { "q": "¿Cuánto cuesta podar una palmera?", "a": "Depende de la altura, el acceso y el estado. Las palmeras pequeñas parten de unos 60 € y las altas pueden superar los 200 €. Escríbenos por WhatsApp con una foto y te damos precio cerrado gratis." },
+    { "q": "¿Necesito permiso para podar en Fuengirola?", "a": "La poda de mantenimiento en jardín privado no suele requerir permiso. Para talas o ejemplares protegidos sí puede hacer falta. Te asesoramos gratis antes de cada trabajo." },
+    { "q": "¿Se llevan los restos de poda?", "a": "Sí. Todos los presupuestos incluyen retirada y gestión de residuos. Tu jardín queda limpio." },
+    { "q": "¿Atendéis urgencias?", "a": "Sí, 24h para árboles caídos o ramas peligrosas en Fuengirola, Mijas, Benalmádena y Alhaurín. Llama directamente." },
+    { "q": "¿Cada cuánto hay que podar una palmera?", "a": "Una vez al año es lo habitual en la Costa del Sol, idealmente en primavera o verano. Te avisamos cuando toque la siguiente." }
+  ],
+  "contact": {
+    "title": "Pide tu presupuesto gratis",
+    "subtitle": "Cuéntanos qué necesitas y te respondemos hoy mismo",
+    "submit": "Enviar solicitud",
+    "success": "¡Recibido! Te contactaremos hoy mismo.",
+    "viaWhatsApp": "O escríbenos directo por WhatsApp"
+  }
+}
