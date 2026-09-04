@@ -1,0 +1,25 @@
+{
+  "name": "facundo-poda-landing",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "latest",
+    "@astrojs/sitemap": "latest",
+    "tailwindcss": "latest",
+    "@tailwindcss/vite": "latest",
+    "sharp": "latest",
+    "photoswipe": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "typescript": "latest"
+  }
+}
