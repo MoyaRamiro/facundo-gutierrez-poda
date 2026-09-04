@@ -1,0 +1,25 @@
+---
+import type { LandingContent, Lang } from '../utils/i18n';
+
+interface Props {
+  lang: Lang;
+  content: LandingContent;
+}
+const { content } = Astro.props;
+---
+
+<section id="zonas" class="border-y border-brand-100 bg-brand-50/50">
+  <div class="mx-auto max-w-6xl px-4 py-10">
+    <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{content.areas.title}</h2>
+    <p class="mt-1 text-sm text-neutral-600 sm:text-base">{content.areas.subtitle}</p>
+    <div class="scrollbar-hide -mx-4 mt-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+      {
+        content.areas.towns.map((town) => (
+          <span class="inline-flex min-h-[44px] shrink-0 snap-start items-center rounded-full bg-white px-4 py-2 text-sm font-semibold text-brand-800 ring-1 ring-brand-200">
+            📍 {town}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</section>
