@@ -1,0 +1,55 @@
+---
+import { SITE_CONFIG } from '../content/config';
+import { whatsappLink } from '../utils/whatsapp';
+
+interface Props {
+  lang: 'es' | 'en';
+}
+const { lang } = Astro.props;
+const wa = whatsappLink(
+  lang === 'es' ? 'Hola, necesito presupuesto de poda.' : 'Hi, I need a pruning quote.'
+);
+const quote = lang === 'es' ? 'Presupuesto' : 'Quote';
+const switchHref = lang === 'es' ? '/en/' : '/';
+const switchLabel = lang === 'es' ? 'EN' : 'ES';
+---
+
+<header class="sticky top-0 z-50 border-b border-brand-100 bg-white/95 backdrop-blur-sm">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
+    <a href={lang === 'es' ? '/' : '/en/'} class="flex items-center gap-2" aria-label={SITE_CONFIG.name}>
+      <img src="/favicon.svg" alt="" width="32" height="32" />
+      <span class="text-sm font-bold leading-tight text-brand-800">
+        Facundo Gutiérrez<br />
+        <span class="text-xs font-normal text-neutral-500">
+          {lang === 'es' ? 'Poda en Fuengirola' : 'Pruning in Fuengirola'}
+        </span>
+      </span>
+    </a>
+    <div class="flex items-center gap-2">
+      <a
+        href={switchHref}
+        onclick={lang === 'es' ? "document.cookie='lang=en;path=/;max-age=31536000'" : "document.cookie='lang=es;path=/;max-age=31536000'"}
+        class="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg px-2 text-sm font-semibold text-neutral-600 hover:bg-neutral-100"
+        aria-label="Switch language"
+      >
+        {switchLabel}
+      </a>
+      <a
+        href={SITE_CONFIG.phoneHref}
+        class="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg bg-white px-3 text-sm font-semibold text-brand-700 ring-1 ring-brand-600 hover:bg-brand-50"
+        aria-label={lang === 'es' ? 'Llamar' : 'Call'}
+      >
+        📞 <span class="ml-1 hidden sm:inline">{lang === 'es' ? 'Llamar' : 'Call'}</span>
+      </a>
+      <a
+        href={wa}
+        target="_blank"
+        rel="noopener"
+        data-track="click_whatsapp_header"
+        class="flex min-h-[44px] items-center justify-center rounded-lg bg-brand-600 px-3 text-sm font-semibold text-white hover:bg-brand-700"
+      >
+        💬 <span class="ml-1 hidden sm:inline">WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</header>
