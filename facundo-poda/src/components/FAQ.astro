@@ -1,0 +1,33 @@
+---
+import { faqJsonLd } from '../utils/schema';
+import type { LandingContent, Lang } from '../utils/i18n';
+
+interface Props {
+  lang: Lang;
+  content: LandingContent;
+}
+const { content, lang } = Astro.props;
+const title = lang === 'es' ? 'Preguntas frecuentes' : 'Frequently asked questions';
+---
+
+<section class="mx-auto max-w-4xl px-4 py-12">
+  <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{title}</h2>
+  <div class="mt-6 space-y-3">
+    {
+      content.faq.map((item, i) => (
+        <details
+          class="group rounded-xl border border-neutral-200 bg-white"
+          open={i === 0 ? true : undefined}
+          data-track={`faq_open_${i}`}
+        >
+          <summary class="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-3 p-4 text-base font-bold text-neutral-900 focus-visible:ring-2 focus-visible:ring-brand-500">
+            {item.q}
+            <span class="text-brand-600 transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
+          </summary>
+          <p class="px-4 pb-4 text-sm leading-relaxed text-neutral-600">{item.a}</p>
+        </details>
+      ))
+    }
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd(content.faq))} />
+</section>
