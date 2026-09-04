@@ -1,8 +1,8 @@
 export const SITE_CONFIG = {
   name: 'Facundo Gutiérrez — Poda en Fuengirola',
-  phoneDisplay: '+34 952 XX XX XX',
-  phoneHref: 'tel:+34952XXXXXX',
-  whatsappNumber: '346XXXXXXXX',
+  phoneDisplay: '+34 632 227 016',
+  phoneHref: 'tel:+34632227016',
+  whatsappNumber: '34632227016',
   email: 'contacto@facundogutierrez-poda.es',
   address: 'Fuengirola, Málaga, España',
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Fuengirola',
