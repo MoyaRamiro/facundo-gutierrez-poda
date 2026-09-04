@@ -1,0 +1,189 @@
+---
+import { SITE_CONFIG } from '../content/config';
+import { whatsappLink } from '../utils/whatsapp';
+import type { LandingContent, Lang } from '../utils/i18n';
+
+interface Props {
+  lang: Lang;
+  content: LandingContent;
+}
+const { content, lang } = Astro.props;
+const waDirect = whatsappLink(
+  lang === 'es' ? 'Hola, necesito presupuesto de poda.' : 'Hi, I need a pruning quote.'
+);
+const serviceOptions = content.services.map((s) => s.title);
+---
+
+<section id="contacto" class="border-t border-brand-100 bg-brand-50/50">
+  <div class="mx-auto max-w-2xl px-4 py-12">
+    <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{content.contact.title}</h2>
+    <p class="mt-1 text-sm text-neutral-600 sm:text-base">{content.contact.subtitle}</p>
+
+    <form
+      name="contacto"
+      method="POST"
+      action="https://api.web3forms.com/submit"
+      class="mt-6 space-y-4 rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm"
+      id="contact-form"
+    >
+      <input type="hidden" name="access_key" value="REEMPLAZAR-WEB3FORMS-KEY" />
+      <input
+        type="hidden"
+        name="subject"
+        value={lang === 'es' ? 'Nueva solicitud de presupuesto — poda' : 'New quote request — pruning'}
+      />
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+
+      <div>
+        <label for="nombre" class="mb-1 block text-sm font-bold text-neutral-800">
+          {lang === 'es' ? 'Nombre' : 'Name'}
+        </label>
+        <input
+          id="nombre"
+          name="nombre"
+          type="text"
+          required
+          autocomplete="name"
+          minlength="2"
+          class="min-h-[48px] w-full rounded-lg border border-neutral-300 px-3 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        />
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label for="telefono" class="mb-1 block text-sm font-bold text-neutral-800">
+            {lang === 'es' ? 'Teléfono' : 'Phone'}
+          </label>
+          <input
+            id="telefono"
+            name="telefono"
+            type="tel"
+            required
+            inputmode="tel"
+            autocomplete="tel"
+            pattern="[0-9+ ]{9,15}"
+            class="min-h-[48px] w-full rounded-lg border border-neutral-300 px-3 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          />
+        </div>
+        <div>
+          <label for="zona" class="mb-1 block text-sm font-bold text-neutral-800">
+            {lang === 'es' ? 'Zona' : 'Area'}
+          </label>
+          <select
+            id="zona"
+            name="zona"
+            required
+            class="min-h-[48px] w-full rounded-lg border border-neutral-300 bg-white px-3 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          >
+            <option value="">—</option>
+            {
+              ['Fuengirola', 'Mijas', 'Benalmádena', 'Alhaurín el Grande', 'Alhaurín de la Torre'].map(
+                (t) => (
+                  <option value={t}>{t}</option>
+                )
+              )
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="servicio" class="mb-1 block text-sm font-bold text-neutral-800">
+          {lang === 'es' ? 'Servicio' : 'Service'}
+        </label>
+        <select
+          id="servicio"
+          name="servicio"
+          required
+          class="min-h-[48px] w-full rounded-lg border border-neutral-300 bg-white px-3 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        >
+          <option value="">—</option>
+          {serviceOptions.map((s) => <option value={s}>{s}</option>)}
+        </select>
+      </div>
+
+      <div>
+        <label for="mensaje" class="mb-1 block text-sm font-bold text-neutral-800">
+          {lang === 'es' ? 'Mensaje (opcional)' : 'Message (optional)'}
+        </label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          maxlength="2000"
+          class="w-full rounded-lg border border-neutral-300 px-3 py-2 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+        ></textarea>
+      </div>
+
+      <p id="form-error" class="hidden text-sm font-semibold text-red-600" role="alert"></p>
+      <p id="form-ok" class="hidden text-sm font-semibold text-brand-700" role="status">{content.contact.success}</p>
+
+      <button
+        type="submit"
+        data-track="form_submit_attempt"
+        class="flex min-h-[52px] w-full items-center justify-center rounded-xl bg-brand-600 px-6 text-base font-bold text-white hover:bg-brand-700"
+      >
+        {content.contact.submit}
+      </button>
+    </form>
+
+    <p class="mt-4 text-center text-sm text-neutral-600">
+      {content.contact.viaWhatsApp}:{' '}
+      <a href={waDirect} target="_blank" rel="noopener" class="font-bold text-brand-700 underline">
+        WhatsApp
+      </a>{' '}
+      · <a href={SITE_CONFIG.phoneHref} class="font-bold text-brand-700 underline">{SITE_CONFIG.phoneDisplay}</a>
+    </p>
+  </div>
+</section>
+
+<script>
+  import { z } from 'zod';
+
+  const schema = z.object({
+    nombre: z.string().min(2, 'Nombre muy corto'),
+    telefono: z.string().regex(/^[0-9+ ]{9,15}$/, 'Teléfono inválido'),
+    zona: z.string().min(1, 'Elige zona'),
+    servicio: z.string().min(1, 'Elige servicio'),
+    mensaje: z.string().max(2000).optional(),
+  });
+
+  const form = document.getElementById('contact-form') as HTMLFormElement | null;
+  const err = document.getElementById('form-error');
+  const ok = document.getElementById('form-ok');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    const parsed = schema.safeParse(data);
+    if (!parsed.success) {
+      if (err) {
+        err.textContent = parsed.error.issues[0]?.message ?? 'Revisa el formulario';
+        err.classList.remove('hidden');
+      }
+      ok?.classList.add('hidden');
+      return;
+    }
+    err?.classList.add('hidden');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const json = await res.json();
+      if (json.success) {
+        ok?.classList.remove('hidden');
+        form.reset();
+      } else if (err) {
+        err.textContent = 'No se pudo enviar. Prueba por WhatsApp.';
+        err.classList.remove('hidden');
+      }
+    } catch {
+      if (err) {
+        err.textContent = 'Sin conexión. Prueba por WhatsApp.';
+        err.classList.remove('hidden');
+      }
+    }
+  });
+</script>
