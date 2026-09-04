@@ -2,13 +2,11 @@
 import '../styles/global.css';
 import { SITE_CONFIG } from '../content/config';
 import { localBusinessJsonLd } from '../utils/schema';
-import type { FaqItem } from '../utils/i18n';
 
 interface Props {
   lang: 'es' | 'en';
   title: string;
   description: string;
-  faq?: FaqItem[];
 }
 
 const { lang, title, description } = Astro.props;

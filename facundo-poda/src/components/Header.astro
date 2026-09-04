@@ -9,7 +9,6 @@ const { lang } = Astro.props;
 const wa = whatsappLink(
   lang === 'es' ? 'Hola, necesito presupuesto de poda.' : 'Hi, I need a pruning quote.'
 );
-const quote = lang === 'es' ? 'Presupuesto' : 'Quote';
 const switchHref = lang === 'es' ? '/en/' : '/';
 const switchLabel = lang === 'es' ? 'EN' : 'ES';
 ---

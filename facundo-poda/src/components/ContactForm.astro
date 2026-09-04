@@ -176,11 +176,13 @@ const serviceOptions = content.services.map((s) => s.title);
         ok?.classList.remove('hidden');
         form.reset();
       } else if (err) {
+        ok?.classList.add('hidden');
         err.textContent = 'No se pudo enviar. Prueba por WhatsApp.';
         err.classList.remove('hidden');
       }
     } catch {
       if (err) {
+        ok?.classList.add('hidden');
         err.textContent = 'Sin conexión. Prueba por WhatsApp.';
         err.classList.remove('hidden');
       }
