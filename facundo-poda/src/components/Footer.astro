@@ -1,0 +1,39 @@
+---
+import { SITE_CONFIG } from '../content/config';
+import type { Lang } from '../utils/i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const legal = lang === 'es' ? 'Aviso legal y privacidad: solicítalos por WhatsApp.' : 'Legal notice and privacy: request them on WhatsApp.';
+---
+
+<footer class="border-t border-neutral-200 bg-neutral-950 text-neutral-300">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-3">
+    <div>
+      <p class="text-base font-bold text-white">{SITE_CONFIG.name}</p>
+      <p class="mt-1 text-sm">{SITE_CONFIG.address}</p>
+      <p class="mt-1 text-sm">
+        <a href={SITE_CONFIG.phoneHref} class="underline hover:text-white">{SITE_CONFIG.phoneDisplay}</a>
+      </p>
+      <p class="mt-1 text-sm">
+        <a href={`mailto:${SITE_CONFIG.email}`} class="underline hover:text-white">{SITE_CONFIG.email}</a>
+      </p>
+    </div>
+    <div>
+      <p class="text-sm font-bold uppercase tracking-wide text-neutral-400">
+        {lang === 'es' ? 'Zonas' : 'Areas'}
+      </p>
+      <ul class="mt-2 space-y-1 text-sm">
+        {SITE_CONFIG.areas.map((a) => <li>📍 {a}</li>)}
+      </ul>
+    </div>
+    <div>
+      <p class="text-sm font-bold uppercase tracking-wide text-neutral-400">Legal</p>
+      <p class="mt-2 text-xs leading-relaxed">{legal}</p>
+      <p class="mt-2 text-xs">© 2026 {SITE_CONFIG.name}</p>
+    </div>
+  </div>
+  <div class="h-20 lg:hidden" aria-hidden="true"></div>
+</footer>

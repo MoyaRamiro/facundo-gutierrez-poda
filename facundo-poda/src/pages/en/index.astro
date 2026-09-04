@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import ServiceArea from '../../components/ServiceArea.astro';
+import WhyUs from '../../components/WhyUs.astro';
+import Gallery from '../../components/Gallery.astro';
+import Reviews from '../../components/Reviews.astro';
+import FAQ from '../../components/FAQ.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import StickyCTA from '../../components/StickyCTA.astro';
+import Footer from '../../components/Footer.astro';
+import { loadLanding } from '../../utils/i18n';
+import { serviceJsonLd } from '../../utils/schema';
+
+const content = loadLanding('en');
+const servicesLd = serviceJsonLd(content.services, 'en');
+const title = 'Palm & tree pruning in Fuengirola | Facundo Gutiérrez';
+const description =
+  'Palm and tree pruning specialists in Fuengirola, Mijas, Benalmádena and Alhaurín. Free quote, 2h reply, waste removal included. Call or WhatsApp.';
+---
+
+<Layout lang="en" title={title} description={description} faq={content.faq}>
+  <script type="application/ld+json" set:html={JSON.stringify(servicesLd)} />
+  <Header lang="en" />
+  <main>
+    <Hero lang="en" content={content} />
+    <Services lang="en" content={content} />
+    <ServiceArea lang="en" content={content} />
+    <WhyUs lang="en" content={content} />
+    <Gallery lang="en" content={content} />
+    <Reviews lang="en" content={content} />
+    <FAQ lang="en" content={content} />
+    <ContactForm lang="en" content={content} />
+  </main>
+  <Footer lang="en" />
+  <StickyCTA lang="en" />
+</Layout>
