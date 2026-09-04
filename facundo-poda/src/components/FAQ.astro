@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { faqJsonLd } from '../utils/schema';
 import type { LandingContent, Lang } from '../utils/i18n';
 
@@ -11,7 +12,7 @@ const title = lang === 'es' ? 'Preguntas frecuentes' : 'Frequently asked questio
 ---
 
 <section class="mx-auto max-w-4xl px-4 py-12">
-  <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{title}</h2>
+  <h2 class="font-display text-2xl font-bold uppercase tracking-wide text-neutral-900 sm:text-3xl">{title}</h2>
   <div class="mt-6 space-y-3">
     {
       content.faq.map((item, i) => (
@@ -22,7 +23,7 @@ const title = lang === 'es' ? 'Preguntas frecuentes' : 'Frequently asked questio
         >
           <summary class="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-3 p-4 text-base font-bold text-neutral-900 focus-visible:ring-2 focus-visible:ring-brand-500">
             {item.q}
-            <span class="text-brand-600 transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
+            <Icon name="plus" cls="h-5 w-5 shrink-0 text-brand-700 transition-transform group-open:rotate-45" />
           </summary>
           <p class="px-4 pb-4 text-sm leading-relaxed text-neutral-600">{item.a}</p>
         </details>

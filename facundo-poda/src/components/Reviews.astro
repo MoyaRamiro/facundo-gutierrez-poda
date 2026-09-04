@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import type { LandingContent, Lang } from '../utils/i18n';
 
 interface Props {
@@ -11,14 +12,17 @@ const title = lang === 'es' ? 'Lo que dicen nuestros clientes' : 'What our clien
 
 <section class="border-y border-brand-100 bg-brand-50/50">
   <div class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{title}</h2>
+    <h2 class="font-display text-2xl font-bold uppercase tracking-wide text-neutral-900 sm:text-3xl">{title}</h2>
     <div class="scrollbar-hide -mx-4 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 lg:mx-0 lg:grid lg:grid-cols-3 lg:overflow-visible lg:px-0">
       {
         content.reviews.map((r) => (
           <figure class="w-80 shrink-0 snap-start rounded-xl border border-neutral-200 bg-white p-5 shadow-sm lg:w-auto">
-            <div class="text-yellow-400" aria-label={`${r.rating} / 5`}>
-              {'★'.repeat(r.rating)}
-              <span class="sr-only">{r.rating} de 5</span>
+            <div class="flex gap-0.5 text-yellow-500" role="img" aria-label={`${r.rating} / 5`}>
+              {
+                Array.from({ length: r.rating }).map(() => (
+                  <Icon name="star" filled cls="h-4 w-4" />
+                ))
+              }
             </div>
             <blockquote class="mt-2 text-sm text-neutral-700">“{r.text}”</blockquote>
             <figcaption class="mt-3 text-sm font-bold text-neutral-900">

@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { SITE_CONFIG } from '../content/config';
 import { whatsappLink } from '../utils/whatsapp';
 
@@ -38,7 +39,7 @@ const switchLabel = lang === 'es' ? 'EN' : 'ES';
         class="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg bg-white px-3 text-sm font-semibold text-brand-700 ring-1 ring-brand-600 hover:bg-brand-50"
         aria-label={lang === 'es' ? 'Llamar' : 'Call'}
       >
-        📞 <span class="ml-1 hidden sm:inline">{lang === 'es' ? 'Llamar' : 'Call'}</span>
+        <Icon name="phone" cls="h-4 w-4" /> <span class="ml-1 hidden sm:inline">{lang === 'es' ? 'Llamar' : 'Call'}</span>
       </a>
       <a
         href={wa}
@@ -47,7 +48,7 @@ const switchLabel = lang === 'es' ? 'EN' : 'ES';
         data-track="click_whatsapp_header"
         class="flex min-h-[44px] items-center justify-center rounded-lg bg-brand-600 px-3 text-sm font-semibold text-white hover:bg-brand-700"
       >
-        💬 <span class="ml-1 hidden sm:inline">WhatsApp</span>
+        <Icon name="whatsapp" cls="h-4 w-4" /> <span class="ml-1 hidden sm:inline">WhatsApp</span>
       </a>
     </div>
   </div>

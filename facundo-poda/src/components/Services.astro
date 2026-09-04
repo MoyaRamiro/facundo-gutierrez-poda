@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import type { LandingContent, Lang } from '../utils/i18n';
 
 interface Props {
@@ -6,33 +7,28 @@ interface Props {
   content: LandingContent;
 }
 const { content, lang } = Astro.props;
-
-const icons: Record<string, string> = {
-  palm: '🌴',
-  tree: '🌳',
-  axe: '🪓',
-  alert: '🚨',
-};
-const title = lang === 'es' ? 'Nuestros servicios' : 'Our services';
+const title = lang === 'es' ? 'Lo que hago' : 'What I do';
 ---
 
-<section id="servicios" class="mx-auto max-w-6xl px-4 py-12">
-  <h2 class="text-2xl font-extrabold text-neutral-900 sm:text-3xl">{title}</h2>
-  <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+<section id="servicios" class="mx-auto max-w-6xl px-4 py-14 sm:py-20">
+  <h2 class="font-display text-3xl font-bold uppercase tracking-wide text-neutral-900 sm:text-4xl">{title}</h2>
+  <div class="mt-4 divide-y divide-neutral-200 border-y border-neutral-200">
     {
       content.services.map((s) => (
-        <article class="rounded-xl border border-brand-100 bg-brand-50 p-4">
-          <div class="text-5xl" aria-hidden="true">{icons[s.icon] ?? '🌿'}</div>
-          <h3 class="mt-3 text-lg font-bold text-neutral-900">{s.title}</h3>
-          <p class="mt-1 text-sm text-neutral-600">{s.benefit}</p>
-          <a
-            href="#contacto"
-            data-track={`click_service_cta_${s.id}`}
-            class="mt-3 inline-flex min-h-[44px] items-center text-sm font-bold text-brand-700 hover:text-brand-800"
-          >
-            {lang === 'es' ? 'Pedir presupuesto →' : 'Get a quote →'}
-          </a>
-        </article>
+        <a
+          href="#contacto"
+          data-track={`click_service_cta_${s.id}`}
+          class="group flex min-h-[76px] items-center gap-4 py-4"
+        >
+          <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-brand-800 text-brand-50">
+            <Icon name={s.icon} cls="h-6 w-6" />
+          </span>
+          <span class="min-w-0 flex-1">
+            <span class="block text-lg font-bold leading-snug text-neutral-900">{s.title}</span>
+            <span class="mt-0.5 block text-sm leading-snug text-neutral-600">{s.benefit}</span>
+          </span>
+          <Icon name="arrow" cls="h-5 w-5 shrink-0 text-brand-700 transition-transform group-hover:translate-x-1" />
+        </a>
       ))
     }
   </div>

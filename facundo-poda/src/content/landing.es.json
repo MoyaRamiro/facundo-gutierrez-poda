@@ -1,27 +1,27 @@
 {
   "hero": {
     "h1": "Poda de palmeras y árboles en Fuengirola y alrededores",
-    "subhead": "Especialistas en poda de palmeras. Presupuesto gratis, respuesta en menos de 2 horas y gestión de residuos incluida.",
+    "subhead": "Soy Facundo. Llevo 15 años podando palmeras —datileras y canarias— y árboles en Fuengirola, Mijas, Benalmádena y Alhaurín. Mándame una foto por WhatsApp y te doy precio cerrado hoy mismo.",
     "ctaWhatsApp": "Pedir presupuesto por WhatsApp",
     "ctaPhone": "Llamar ahora",
-    "badges": ["+15 años de experiencia", "Seguro de responsabilidad civil", "Presupuesto gratis"]
+    "badges": ["15 años en la Costa del Sol", "Asegurado: resp. civil", "Presupuesto gratis en el día"]
   },
   "services": [
-    { "id": "palmeras", "title": "Poda de palmeras", "benefit": "Limpieza de corona, dátiles y seguridad. Palmeras sanas todo el año.", "icon": "palm" },
-    { "id": "arboles", "title": "Poda de árboles", "benefit": "Poda de formación, saneamiento y reducción de copa.", "icon": "tree" },
-    { "id": "tala", "title": "Tala y descepe", "benefit": "Retirada completa y segura, con triturado de tocón.", "icon": "axe" },
-    { "id": "emergencias", "title": "Emergencias 24h", "benefit": "Árbol caído o ramas peligrosas tras tormenta. Actuamos hoy.", "icon": "alert" }
+    { "id": "palmeras", "title": "Poda de palmeras", "benefit": "Corona, dátiles y palmas secas fuera. Datileras y canarias, del suelo o trepando.", "icon": "palm" },
+    { "id": "arboles", "title": "Poda de árboles", "benefit": "Formación, saneamiento y reducción de copa. Pinos, olivos, cítricos y moreras.", "icon": "tree" },
+    { "id": "tala", "title": "Tala y descepe", "benefit": "Tala controlada por secciones y destoconado. Me llevo todo el resto.", "icon": "axe" },
+    { "id": "emergencias", "title": "Emergencias 24h", "benefit": "Rama caída o árbol peligroso tras el viento. Te atiendo hoy mismo.", "icon": "alert" }
   ],
   "areas": {
     "title": "Zona de servicio",
-    "subtitle": "Nos desplazamos a tu zona en la Costa del Sol",
+    "subtitle": "Base en Fuengirola — normalmente el mismo día en tu jardín",
     "towns": ["Fuengirola", "Mijas", "Benalmádena", "Alhaurín el Grande", "Alhaurín de la Torre"]
   },
   "whyUs": [
-    { "icon": "shield", "title": "Asegurado", "desc": "Seguro de responsabilidad civil en cada trabajo." },
-    { "icon": "clock", "title": "Respuesta < 2h", "desc": "Te contestamos el mismo día, normalmente en 2 horas." },
-    { "icon": "leaf", "title": "Residuos gestionados", "desc": "Nos llevamos todos los restos. Tu jardín queda limpio." },
-    { "icon": "badge", "title": "+15 años", "desc": "Experiencia local en palmeras y arbolado mediterráneo." }
+    { "icon": "shield", "title": "Asegurado", "desc": "Póliza de responsabilidad civil en cada trabajo. Sin letra pequeña." },
+    { "icon": "clock", "title": "Te contesto yo", "desc": "Nada de intermediarios: hablas conmigo y te respondo en unas 2 horas." },
+    { "icon": "leaf", "title": "Limpio de verdad", "desc": "Trituro y me llevo todos los restos. Tu jardín queda mejor que antes." },
+    { "icon": "badge", "title": "15 años de oficio", "desc": "Palmeras datileras y canarias, pinos y olivos de toda la costa." }
   ],
   "gallery": [
     { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palmera en Fuengirola antes de la poda", "caption": "Palmera datilera — Fuengirola", "service": "palmeras" },
@@ -37,17 +37,17 @@
     { "author": "Antonio M.", "rating": 5, "text": "Tras la tormenta vino el mismo día a retirar una rama peligrosa. Muy serio.", "source": "Google" }
   ],
   "faq": [
-    { "q": "¿Cuánto cuesta podar una palmera?", "a": "Depende de la altura, el acceso y el estado. Las palmeras pequeñas parten de unos 60 € y las altas pueden superar los 200 €. Escríbenos por WhatsApp con una foto y te damos precio cerrado gratis." },
-    { "q": "¿Necesito permiso para podar en Fuengirola?", "a": "La poda de mantenimiento en jardín privado no suele requerir permiso. Para talas o ejemplares protegidos sí puede hacer falta. Te asesoramos gratis antes de cada trabajo." },
+    { "q": "¿Cuánto cuesta podar una palmera?", "a": "Depende de la altura, el acceso y el estado. Las palmeras pequeñas parten de unos 60 € y las altas pueden superar los 200 €. Escríbeme por WhatsApp con una foto y te doy precio cerrado gratis." },
+    { "q": "¿Necesito permiso para podar en Fuengirola?", "a": "La poda de mantenimiento en jardín privado no suele requerir permiso. Para talas o ejemplares protegidos sí puede hacer falta. Te asesoro gratis antes de cada trabajo." },
     { "q": "¿Se llevan los restos de poda?", "a": "Sí. Todos los presupuestos incluyen retirada y gestión de residuos. Tu jardín queda limpio." },
     { "q": "¿Atendéis urgencias?", "a": "Sí, 24h para árboles caídos o ramas peligrosas en Fuengirola, Mijas, Benalmádena y Alhaurín. Llama directamente." },
-    { "q": "¿Cada cuánto hay que podar una palmera?", "a": "Una vez al año es lo habitual en la Costa del Sol, idealmente en primavera o verano. Te avisamos cuando toque la siguiente." }
+    { "q": "¿Cada cuánto hay que podar una palmera?", "a": "Una vez al año es lo habitual en la Costa del Sol, idealmente en primavera o verano. Te aviso cuando toque la siguiente." }
   ],
   "contact": {
-    "title": "Pide tu presupuesto gratis",
-    "subtitle": "Cuéntanos qué necesitas y te respondemos hoy mismo",
-    "submit": "Enviar solicitud",
+    "title": "Pídeme presupuesto",
+    "subtitle": "Cuéntame qué tienes —mejor con foto— y te respondo hoy mismo",
+    "submit": "Pedir presupuesto",
     "success": "¡Recibido! Te contactaremos hoy mismo.",
-    "viaWhatsApp": "O escríbenos directo por WhatsApp"
+    "viaWhatsApp": "¿Más rápido? Escríbeme directo por WhatsApp"
   }
 }

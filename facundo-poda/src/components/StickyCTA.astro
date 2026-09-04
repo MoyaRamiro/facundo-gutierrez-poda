@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { SITE_CONFIG } from '../content/config';
 import { whatsappLink } from '../utils/whatsapp';
 
@@ -16,18 +17,20 @@ const wa = whatsappLink(
     <a
       href={SITE_CONFIG.phoneHref}
       data-track="click_phone_sticky"
-      class="flex min-h-[48px] items-center justify-center rounded-xl bg-white text-base font-bold text-brand-700 ring-2 ring-brand-600"
+      class="flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-white text-base font-bold text-brand-700 ring-2 ring-brand-600"
     >
-      📞 {lang === 'es' ? 'Llamar' : 'Call'}
+      <Icon name="phone" cls="h-5 w-5 shrink-0" />
+      {lang === 'es' ? 'Llamar' : 'Call'}
     </a>
     <a
       href={wa}
       target="_blank"
       rel="noopener"
       data-track="click_whatsapp_sticky"
-      class="flex min-h-[48px] items-center justify-center rounded-xl bg-brand-600 text-base font-bold text-white"
+      class="flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-brand-600 text-base font-bold text-white"
     >
-      💬 WhatsApp
+      <Icon name="whatsapp" cls="h-5 w-5 shrink-0" />
+      WhatsApp
     </a>
   </div>
 </div>

@@ -1,27 +1,27 @@
 {
   "hero": {
     "h1": "Palm & tree pruning in Fuengirola and nearby areas",
-    "subhead": "Palm pruning specialists. Free quote, reply in under 2 hours, green waste removal included.",
+    "subhead": "I'm Facundo. 15 years pruning palms —date and Canary Island— and trees across Fuengirola, Mijas, Benalmádena and Alhaurín. Send me a photo on WhatsApp and I'll give you a fixed price today.",
     "ctaWhatsApp": "Get a quote on WhatsApp",
     "ctaPhone": "Call now",
-    "badges": ["15+ years experience", "Fully insured", "Free quote"]
+    "badges": ["15 years on the Costa del Sol", "Fully insured", "Free quote same day"]
   },
   "services": [
-    { "id": "palmeras", "title": "Palm pruning", "benefit": "Crown cleaning, dates and safety. Healthy palms all year.", "icon": "palm" },
-    { "id": "arboles", "title": "Tree pruning", "benefit": "Formative pruning, deadwood removal and crown reduction.", "icon": "tree" },
-    { "id": "tala", "title": "Felling & stump grinding", "benefit": "Complete safe removal with stump grinding.", "icon": "axe" },
-    { "id": "emergencias", "title": "24h emergency", "benefit": "Fallen tree or dangerous limbs after storms. We act today.", "icon": "alert" }
+    { "id": "palmeras", "title": "Palm pruning", "benefit": "Crown, dates and dead fronds gone. Date and Canary palms, from the ground or climbing.", "icon": "palm" },
+    { "id": "arboles", "title": "Tree pruning", "benefit": "Formative pruning, deadwood removal and crown reduction. Pines, olives, citrus and mulberries.", "icon": "tree" },
+    { "id": "tala", "title": "Felling & stump grinding", "benefit": "Sectional controlled felling plus stump grinding. I take all the waste.", "icon": "axe" },
+    { "id": "emergencias", "title": "24h emergency", "benefit": "Fallen limb or dangerous tree after high winds. I come out the same day.", "icon": "alert" }
   ],
   "areas": {
     "title": "Service area",
-    "subtitle": "We come to you anywhere on the Costa del Sol",
+    "subtitle": "Based in Fuengirola — usually at your garden the same day",
     "towns": ["Fuengirola", "Mijas", "Benalmádena", "Alhaurín el Grande", "Alhaurín de la Torre"]
   },
   "whyUs": [
-    { "icon": "shield", "title": "Insured", "desc": "Public liability insurance on every job." },
-    { "icon": "clock", "title": "Reply < 2h", "desc": "We answer the same day, usually within 2 hours." },
-    { "icon": "leaf", "title": "Waste removed", "desc": "We take all green waste away. Your garden stays clean." },
-    { "icon": "badge", "title": "15+ years", "desc": "Local experience with palms and Mediterranean trees." }
+    { "icon": "shield", "title": "Insured", "desc": "Public liability cover on every job. No small print." },
+    { "icon": "clock", "title": "You talk to me", "desc": "No middlemen: you deal with me directly and I reply within about 2 hours." },
+    { "icon": "leaf", "title": "Properly clean", "desc": "I chip and remove all green waste. Your garden ends up better than before." },
+    { "icon": "badge", "title": "15 years at it", "desc": "Date and Canary palms, pines and olives all along the coast." }
   ],
   "gallery": [
     { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palm tree in Fuengirola before pruning", "caption": "Date palm — Fuengirola", "service": "palmeras" },
@@ -37,17 +37,17 @@
     { "author": "Antonio M.", "rating": 5, "text": "After the storm he came the same day to remove a dangerous limb. Very reliable.", "source": "Google" }
   ],
   "faq": [
-    { "q": "How much does palm pruning cost?", "a": "It depends on height, access and condition. Small palms start around €60, tall ones can exceed €200. Send us a photo on WhatsApp for a free fixed quote." },
-    { "q": "Do I need a permit to prune in Fuengirola?", "a": "Routine maintenance in a private garden usually needs no permit. Felling or protected specimens may. We advise you for free before every job." },
+    { "q": "How much does palm pruning cost?", "a": "It depends on height, access and condition. Small palms start around €60, tall ones can exceed €200. Send me a photo on WhatsApp for a free fixed quote." },
+    { "q": "Do I need a permit to prune in Fuengirola?", "a": "Routine maintenance in a private garden usually needs no permit. Felling or protected specimens may. I advise you for free before every job." },
     { "q": "Do you remove green waste?", "a": "Yes. Every quote includes removal and disposal. Your garden stays clean." },
     { "q": "Do you handle emergencies?", "a": "Yes, 24h for fallen trees or dangerous limbs in Fuengirola, Mijas, Benalmádena and Alhaurín. Just call." },
-    { "q": "How often should a palm be pruned?", "a": "Once a year is typical on the Costa del Sol, ideally spring or summer. We remind you when the next one is due." }
+    { "q": "How often should a palm be pruned?", "a": "Once a year is typical on the Costa del Sol, ideally spring or summer. I'll remind you when the next one is due." }
   ],
   "contact": {
-    "title": "Get your free quote",
-    "subtitle": "Tell us what you need and we reply today",
-    "submit": "Send request",
+    "title": "Ask me for a quote",
+    "subtitle": "Tell me what you've got — photos help — and I'll reply today",
+    "submit": "Get a quote",
     "success": "Received! We will contact you today.",
-    "viaWhatsApp": "Or message us directly on WhatsApp"
+    "viaWhatsApp": "Faster? Message me directly on WhatsApp"
   }
 }

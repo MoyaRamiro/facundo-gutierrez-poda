@@ -10,12 +10,14 @@
     "check": "astro check"
   },
   "dependencies": {
-    "astro": "latest",
     "@astrojs/sitemap": "latest",
-    "tailwindcss": "latest",
+    "@fontsource/barlow-condensed": "^5.3.0",
     "@tailwindcss/vite": "latest",
-    "sharp": "latest",
+    "astro": "latest",
+    "lucide-static": "^1.41.0",
     "photoswipe": "latest",
+    "sharp": "latest",
+    "tailwindcss": "latest",
     "zod": "latest"
   },
   "devDependencies": {

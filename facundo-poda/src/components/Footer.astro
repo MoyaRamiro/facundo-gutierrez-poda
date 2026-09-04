@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { SITE_CONFIG } from '../content/config';
 import type { Lang } from '../utils/i18n';
 
@@ -26,7 +27,7 @@ const legal = lang === 'es' ? 'Aviso legal y privacidad: solicítalos por WhatsA
         {lang === 'es' ? 'Zonas' : 'Areas'}
       </p>
       <ul class="mt-2 space-y-1 text-sm">
-        {SITE_CONFIG.areas.map((a) => <li>📍 {a}</li>)}
+        {SITE_CONFIG.areas.map((a) => <li class="flex items-center gap-1.5"><Icon name="pin" cls="h-4 w-4 shrink-0 text-neutral-500" />{a}</li>)}
       </ul>
     </div>
     <div>

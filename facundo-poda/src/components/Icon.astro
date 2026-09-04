@@ -1,0 +1,48 @@
+---
+import palmtree from 'lucide-static/icons/palmtree.svg?raw';
+import treePine from 'lucide-static/icons/tree-pine.svg?raw';
+import axe from 'lucide-static/icons/axe.svg?raw';
+import siren from 'lucide-static/icons/siren.svg?raw';
+import shieldCheck from 'lucide-static/icons/shield-check.svg?raw';
+import clock from 'lucide-static/icons/clock.svg?raw';
+import leaf from 'lucide-static/icons/leaf.svg?raw';
+import medal from 'lucide-static/icons/medal.svg?raw';
+import phone from 'lucide-static/icons/phone.svg?raw';
+import messageCircle from 'lucide-static/icons/message-circle.svg?raw';
+import mapPin from 'lucide-static/icons/map-pin.svg?raw';
+import check from 'lucide-static/icons/check.svg?raw';
+import star from 'lucide-static/icons/star.svg?raw';
+import plus from 'lucide-static/icons/plus.svg?raw';
+import arrowRight from 'lucide-static/icons/arrow-right.svg?raw';
+
+const maps: Record<string, string> = {
+  palm: palmtree,
+  tree: treePine,
+  axe,
+  alert: siren,
+  shield: shieldCheck,
+  clock,
+  leaf,
+  badge: medal,
+  phone,
+  whatsapp: messageCircle,
+  pin: mapPin,
+  check,
+  star,
+  plus,
+  arrow: arrowRight,
+};
+
+interface Props {
+  name: string;
+  cls?: string;
+  filled?: boolean;
+}
+
+const { name, cls = 'h-6 w-6', filled = false } = Astro.props;
+let svg: string = maps[name] ?? maps['check'] ?? '';
+svg = svg.replace('<svg', `<svg class="${cls}" aria-hidden="true"`);
+if (filled) svg = svg.replace('fill="none"', 'fill="currentColor"');
+---
+
+<Fragment set:html={svg} />

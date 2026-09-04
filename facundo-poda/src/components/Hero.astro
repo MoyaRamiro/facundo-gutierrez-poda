@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 import { SITE_CONFIG } from '../content/config';
 import { whatsappLink } from '../utils/whatsapp';
 import type { LandingContent, Lang } from '../utils/i18n';
@@ -14,9 +15,9 @@ const wa = whatsappLink(
 ---
 
 <section class="bg-gradient-to-b from-brand-50 to-white">
-  <div class="mx-auto max-w-6xl px-4 pb-12 pt-10 sm:pt-16 lg:grid lg:grid-cols-2 lg:gap-12 lg:pt-20">
+  <div class="mx-auto max-w-6xl px-4 pb-14 pt-12 sm:pt-20 lg:grid lg:grid-cols-2 lg:gap-12 lg:pt-24">
     <div>
-      <h1 class="text-3xl font-extrabold leading-tight text-neutral-900 sm:text-4xl lg:text-5xl">
+      <h1 class="font-display text-4xl font-bold leading-[1.05] text-neutral-900 sm:text-5xl lg:text-6xl">
         {content.hero.h1}
       </h1>
       <p class="mt-4 text-base text-neutral-600 sm:text-lg">{content.hero.subhead}</p>
@@ -26,23 +27,26 @@ const wa = whatsappLink(
           target="_blank"
           rel="noopener"
           data-track="click_whatsapp_hero"
-          class="flex min-h-[52px] items-center justify-center rounded-xl bg-brand-600 px-6 text-base font-bold text-white hover:bg-brand-700"
+          class="flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 text-base font-bold text-white hover:bg-brand-700"
         >
-          💬 {content.hero.ctaWhatsApp}
+          <Icon name="whatsapp" cls="h-5 w-5 shrink-0" />
+          {content.hero.ctaWhatsApp}
         </a>
         <a
           href={SITE_CONFIG.phoneHref}
           data-track="click_phone_hero"
-          class="flex min-h-[52px] items-center justify-center rounded-xl bg-white px-6 text-base font-bold text-brand-700 ring-2 ring-brand-600 hover:bg-brand-50"
+          class="flex min-h-[52px] items-center justify-center gap-2 rounded-xl bg-white px-6 text-base font-bold text-brand-700 ring-2 ring-brand-600 hover:bg-brand-50"
         >
-          📞 {content.hero.ctaPhone}
+          <Icon name="phone" cls="h-5 w-5 shrink-0" />
+          {content.hero.ctaPhone}
         </a>
       </div>
       <ul class="mt-6 flex flex-wrap gap-2">
         {
           content.hero.badges.map((badge) => (
-            <li class="rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-800">
-              ✓ {badge}
+            <li class="inline-flex items-center gap-1.5 rounded-full bg-brand-100 px-3 py-1 text-xs font-semibold text-brand-800">
+              <Icon name="check" cls="h-3.5 w-3.5 shrink-0" />
+              {badge}
             </li>
           ))
         }
