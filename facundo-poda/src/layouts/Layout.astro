@@ -1,0 +1,62 @@
+---
+import '../styles/global.css';
+import { SITE_CONFIG } from '../content/config';
+import { localBusinessJsonLd } from '../utils/schema';
+import type { FaqItem } from '../utils/i18n';
+
+interface Props {
+  lang: 'es' | 'en';
+  title: string;
+  description: string;
+  faq?: FaqItem[];
+}
+
+const { lang, title, description } = Astro.props;
+const canonical =
+  lang === 'es' ? 'https://facundogutierrez-poda.es/' : 'https://facundogutierrez-poda.es/en/';
+---
+
+<!doctype html>
+<html lang={lang === 'es' ? 'es-ES' : 'en-US'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="es" href="https://facundogutierrez-poda.es/" />
+    <link rel="alternate" hreflang="en" href="https://facundogutierrez-poda.es/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://facundogutierrez-poda.es/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="prefetch" href={lang === 'es' ? '/en/' : '/'} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="theme-color" content="#15803d" />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(localBusinessJsonLd(lang))}
+    />
+    <script async defer data-website-id="REEMPLAZAR-UMAMI-ID" src="https://analytics.umami.is/script.js"></script>
+    <script is:inline>
+      (function () {
+        try {
+          if (window.location.pathname !== '/') return;
+          var m = document.cookie.match(/(?:^|;\s*)lang=(es|en)/);
+          if (m) {
+            if (m[1] === 'en') window.location.replace('/en/');
+            return;
+          }
+          var l = (navigator.language || 'en').toLowerCase();
+          var detected = l.indexOf('es') === 0 ? 'es' : 'en';
+          document.cookie = 'lang=' + detected + ';path=/;max-age=31536000';
+          if (detected === 'en') window.location.replace('/en/');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-neutral-900 antialiased">
+    <slot />
+  </body>
+</html>

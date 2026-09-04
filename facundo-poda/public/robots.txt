@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://facundogutierrez-poda.es/sitemap-index.xml
