@@ -24,12 +24,12 @@
     { "icon": "badge", "title": "15 años de oficio", "desc": "Palmeras datileras y canarias, pinos y olivos de toda la costa." }
   ],
   "gallery": [
-    { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palmera en Fuengirola antes de la poda", "caption": "Palmera datilera — Fuengirola", "service": "palmeras" },
+    { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palmera en Fuengirola antes de la poda", "caption": "Palmera datilera, Fuengirola", "service": "palmeras" },
     { "src": "/images/galeria/palmera-despues-1.jpg", "alt": "Palmera en Fuengirola después de la poda", "caption": "Misma palmera tras limpieza de corona", "service": "palmeras" },
-    { "src": "/images/galeria/pino-antes-1.jpg", "alt": "Pino en Mijas antes de reducir copa", "caption": "Reducción de copa — Mijas", "service": "arboles" },
+    { "src": "/images/galeria/pino-antes-1.jpg", "alt": "Pino en Mijas antes de reducir copa", "caption": "Reducción de copa, Mijas", "service": "arboles" },
     { "src": "/images/galeria/pino-despues-1.jpg", "alt": "Pino en Mijas después de reducir copa", "caption": "Copa equilibrada y segura", "service": "arboles" },
-    { "src": "/images/galeria/jardin-1.jpg", "alt": "Jardín en Benalmádena tras mantenimiento", "caption": "Mantenimiento — Benalmádena", "service": "arboles" },
-    { "src": "/images/galeria/tala-1.jpg", "alt": "Tala controlada de árbol en Alhaurín", "caption": "Tala controlada — Alhaurín", "service": "tala" }
+    { "src": "/images/galeria/jardin-1.jpg", "alt": "Jardín en Benalmádena tras mantenimiento", "caption": "Mantenimiento, Benalmádena", "service": "arboles" },
+    { "src": "/images/galeria/tala-1.jpg", "alt": "Tala controlada de árbol en Alhaurín", "caption": "Tala controlada, Alhaurín", "service": "tala" }
   ],
   "reviews": [
     { "author": "Carmen R.", "rating": 5, "text": "Vino a podar dos palmeras altísimas y dejó todo impecable. Rápido y buen precio.", "source": "Google" },

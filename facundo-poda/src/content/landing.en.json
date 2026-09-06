@@ -24,12 +24,12 @@
     { "icon": "badge", "title": "15 years at it", "desc": "Date and Canary palms, pines and olives all along the coast." }
   ],
   "gallery": [
-    { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palm tree in Fuengirola before pruning", "caption": "Date palm — Fuengirola", "service": "palmeras" },
+    { "src": "/images/galeria/palmera-antes-1.jpg", "alt": "Palm tree in Fuengirola before pruning", "caption": "Date palm, Fuengirola", "service": "palmeras" },
     { "src": "/images/galeria/palmera-despues-1.jpg", "alt": "Palm tree in Fuengirola after pruning", "caption": "Same palm after crown cleaning", "service": "palmeras" },
-    { "src": "/images/galeria/pino-antes-1.jpg", "alt": "Pine in Mijas before crown reduction", "caption": "Crown reduction — Mijas", "service": "arboles" },
+    { "src": "/images/galeria/pino-antes-1.jpg", "alt": "Pine in Mijas before crown reduction", "caption": "Crown reduction, Mijas", "service": "arboles" },
     { "src": "/images/galeria/pino-despues-1.jpg", "alt": "Pine in Mijas after crown reduction", "caption": "Balanced, safe crown", "service": "arboles" },
-    { "src": "/images/galeria/jardin-1.jpg", "alt": "Garden in Benalmádena after maintenance", "caption": "Maintenance — Benalmádena", "service": "arboles" },
-    { "src": "/images/galeria/tala-1.jpg", "alt": "Controlled tree felling in Alhaurín", "caption": "Controlled felling — Alhaurín", "service": "tala" }
+    { "src": "/images/galeria/jardin-1.jpg", "alt": "Garden in Benalmádena after maintenance", "caption": "Maintenance, Benalmádena", "service": "arboles" },
+    { "src": "/images/galeria/tala-1.jpg", "alt": "Controlled tree felling in Alhaurín", "caption": "Controlled felling, Alhaurín", "service": "tala" }
   ],
   "reviews": [
     { "author": "Carmen R.", "rating": 5, "text": "He pruned two very tall palms and left everything spotless. Fast and fair price.", "source": "Google" },
