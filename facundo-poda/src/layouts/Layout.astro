@@ -33,6 +33,11 @@ const canonical =
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://facundogutierrez-poda.es/images/logo.jpg" />
+    <meta property="og:image:alt" content={lang === 'es' ? 'Logo Podas Gutiérrez' : 'Podas Gutiérrez logo'} />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'es' ? 'en_US' : 'es_ES'} />
+    <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#15803d" />
     <script
       type="application/ld+json"
