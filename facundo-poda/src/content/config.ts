@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: 'Facundo Gutiérrez — Poda en Fuengirola',
+  name: 'Facundo Gutiérrez, Poda en Fuengirola',
   phoneDisplay: '+34 632 227 016',
   phoneHref: 'tel:+34632227016',
   whatsappNumber: '34632227016',

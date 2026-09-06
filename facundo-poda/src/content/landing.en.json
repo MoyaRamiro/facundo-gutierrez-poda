@@ -45,9 +45,10 @@
   ],
   "contact": {
     "title": "Ask me for a quote",
-    "subtitle": "Tell me what you've got — photos help — and I'll reply today",
+    "subtitle": "Tell me what you've got (photos help) and I'll reply today",
     "submit": "Get a quote",
     "success": "Received! We will contact you today.",
     "viaWhatsApp": "Faster? Message me directly on WhatsApp"
   }
 }
+
